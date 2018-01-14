@@ -13,10 +13,26 @@
 =============================================*/
 
 
-
+// main route
 Route::get('/', 'HomeController@index');
 
-Route::get('/home', 'HomeController@index');
-Route::get('/about', 'HomeController@index');
-Route::get('/portfolio', 'HomeController@index');
-Route::get('/contact', 'HomeController@index');
+
+
+
+// API
+Route::get('/rest-api/portfolio/show/{id}', 'PortfolioController@show');
+
+
+// GET ALL DATA
+Route::get('/rest-api/portfolio', 'PortfolioController@index');
+
+
+
+
+
+
+
+
+
+// TEMPORARY
+Route::get('/rest-api/portfolio/dummy', 'PortfolioController@dummy');
