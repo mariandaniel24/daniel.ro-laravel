@@ -3,13 +3,13 @@
 <div  class="container standard">
 
 
-	<br><br><br>
+
 	<div class="section-heading">
 
-		<h1 class="title text-center">ABOUT</h1>
+		<h1 class="page-title text-center">@lang('about.about_title')</h1>
 
 	</div><!-- /.section-heading -->
-	<br><br>
+
 	<div class="row justify-content-center">
 
 
@@ -24,12 +24,12 @@
 			<div class="section-about">
 
 				<p class="about-hi">
-					Hi! I'm <span>Daniel</span>
+					@lang('about.hi')
 				</p><!-- /.title -->
 				<br><br><br>
-					<p class="about-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique ut, incidunt iure quaerat a nesciunt sunt repellendus maiores!</p>
+					<p class="about-info">@lang('about.first_paragraph')</p>
 					<br>
-					<p class="about-info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, inventore!</p>
+					<p class="about-info">@lang('about.second_paragraph')</p>
 				<br><br>
 			</div><!-- /.section-about -->
 		</div><!-- /.col-md-6 -->

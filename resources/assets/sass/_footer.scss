@@ -1,0 +1,61 @@
+footer.footer {
+    width: 100%;
+    height: 150px;
+    background: $color1;
+    position: relative;
+}
+
+ul.social-list {
+    height: 100%;
+    margin-top: 20px;
+    li {
+        
+        display: inline;
+        margin: 0 2px;
+        a {
+            display: inline-block;
+            text-align: center;
+            i.fa {
+                border-radius: 50%;
+                width: 38px;
+                height: 38px; // border: 1px solid rgba(255, 255, 255, .3);
+                vertical-align: middle;
+                line-height: 38px;
+                font-size: 1.3rem;
+                
+                transition: all .3s;
+                
+                color: $social-color;
+
+                &:hover {
+                    background: #fff;
+                    // color: #fff;
+
+                }
+
+
+
+                &.fa-facebook {
+                    &:hover {
+                        color: $facebook-color;
+
+                    }
+                }
+                &.fa-github {
+                    &:hover {
+                        color: $github-color;
+
+                    }
+                }
+                &.fa-twitter {
+                    &:hover {
+                        color: $twitter-color;
+
+                    }
+                }
+
+
+            }
+        }
+    }
+}

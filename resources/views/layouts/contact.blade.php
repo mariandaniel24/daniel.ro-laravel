@@ -1,98 +1,54 @@
-
-<footer class="footer blue-bg">
-	
-	<div class="container footer">
-
-
-		<br><br><br>
-		<div class="section-heading">
-			<h1 class="text-center">CONTACT</h1>
-		</div>
-
-
-
+<div class="contact-box">
+	<div class="section-heading">
+		<h1 class="page-title contact-title text-center">@lang('contact.contact_title')</h1>
+	</div>
+	<div class="container">
 		<div class="row justify-content-center">
+			<div class="col-md-7 col-lg-4">
+				<form id="contact-form" method="POST">
+					<div class="row justify-content-center">
+						<div class="col-sm-6 col-md-6 footer-bg">
+							<div class="form-group">
+								{{ csrf_field() }}
+								<label for="name">@lang('contact.name')</label>
+								<input required minlength="3" tabindex="1" type="text" class="text-input shadow-2" name="name" value="">
+								<span class="input-line"></span>
+							</div>
+						</div>
+						<div class="col-sm-6 col-md-6 footer-bg">
+							<div class="form-group">
+								<label for="email">@lang('contact.email')</label>
+								<input required minlength="3" tabindex="2" type="email" class="text-input shadow-2" name="email" value="">
+								<span class="input-line"></span>
+							</div>
+						</div>
+						<div class="col-sm-12 col-md-12 footer-bg">
+							<div class="form-group">
+								<label for="message">@lang('contact.message')</label>
+								<textarea required minlength="10" tabindex="3" spellcheck="false" type="text" rows="7" class="text-input shadow-2" name="message"></textarea>
+								<span class="input-line"></span>
+							</div>
+						</div>
+						<div class="col-sm-12 col-md-12 footer-bg">
+							<div class="form-group">
+								<button class="primary" id="contact-submit">@lang('contact.send_message') 
 
-			<div class="col-xs-12 col-sm-8 col-md-8 col-lg-6">
+									
+<div id="contact-loading-box" class="hide">
+										<svg class="contact-loading-icon" width="100%" height="100%" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+											<circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+										</svg>
+									</div>
 
-
-				<div class="row justify-content-center">
-
-					<div class="col-sm-6 col-md-6">
-						<div class="form-group">
+								
+							</button>
 							
-							<label for="name">Name</label>
-							<input type="text" class="text-input" name="name" value="">
-						</div><!-- /.form-group -->
-					</div><!-- /.col-md-2 -->
-
-					<div class="col-sm-6 col-md-6">
-						<div class="form-group">
-							
-							<label for="email">Email</label>
-							<input type="text" class="text-input" name="email" placeholder="email" value="">
-						</div><!-- /.form-group -->
-					</div><!-- /.col-md-4 -->
-
-
-					<div class="col-sm-12 col-md-12">
-						<div class="form-group">
-							
-							<label for="message">Message:</label>
-							<textarea type="text" rows="8" class="text-input" name="message" placeholder="message" value=""></textarea>
-						</div><!-- /.form-group -->
-
-					</div><!-- /.col-md-7 -->
-				</div><!-- /.row -->
-
-
-			</div><!-- /.col-md-4 -->
-
-
-
-
-		</div><!-- /.row justify-content-center  -->
-
-	</div><!-- /.container  -->	
-
-
-
-
-	<div class="footer-section">
-		<div class="container">
-
-			<div class="row justify-content-center">
-
-				<div class="col-md-4">
-					<div class="social-box text-left">
-						<p>My social media</p>	
-						<a href="#">
-							<i class="fa fa-twitter"></i>
-						</a>
-						<a href="#">
-							<i class="fa fa-github"></i>
-						</a>
-						<a href="#">
-							<i class="fa fa-facebook"></i>
-						</a>
-
-					</div><!-- /.social-box -->
-				</div><!-- /.col-md-4 -->
-
-
-				<div class="col-md-4">
-					<div class="copyright-box text-right">
-
-						<p>
-							copyright text Lorem ipsum dolor sit amet, consectetur.
-
-						</p>
-					</div><!-- /.copyright-box -->
-				</div><!-- /.col-md-4 -->
-
-
-			</div><!-- /.row -->
-		</div><!-- /.container -->
-	</div><!-- /.footer-section -->
-
-</footer><!-- /.footer -->
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+</div>

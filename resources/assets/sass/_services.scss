@@ -1,0 +1,52 @@
+// services
+.service-col {
+    transition: transform .2s linear!important; // on hover on col, affect the icon/box
+    &:hover {
+        @include transform(scale(1.1)!important);
+        >.service-box .icon-box {
+            background: $silver-color;
+            >i.fa {
+                color: $color4;
+            }
+        }
+    }
+}
+
+.service-box {
+    padding: 5px;
+    margin: 10px 5px;
+}
+
+.icon-box {
+    border: 1px solid $color4;
+    border-radius: 50%;
+    width: $service-size;
+    height: $service-size;
+    text-align: center;
+    margin: 0 auto;
+    background: $color4;
+    transition: background .3s linear;
+    i.fa {
+        font-size: $service-icon-size;
+        display: inline-block;
+        vertical-align: middle;
+        line-height: $service-size;
+        color: $white-color;
+        transition: color .3s linear;
+    }
+}
+
+.description-box {
+    margin-top: 10px;
+    display: block;
+    .service-title {
+        font-family: $sans-font;
+        font-weight: 600;
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+    p.service-paragraph {
+        font-size: .77rem;
+        line-height: 22px;
+    }
+}

@@ -1,0 +1,27 @@
+$header-image: url('https://i.imgur.com/h6WcDv5.jpg');
+// $header-image: url('/img/banner5.jpg');
+// // Background color
+// $container-color: #f0f0f0;
+// $icon-color: #1257b0;
+// $blue-color: #0c9ff2;
+// $title-color: rgb(60, 60, 60);
+// FONT FAMILY
+// FONT FAMILY
+$logo-font: "Poiret One";
+$sans-font: 'Open Sans';
+$lato-font: 'Lato';
+$raleway-font: 'Raleway';
+// 
+$service-icon-size: 2rem;
+$service-size: 80px;
+// hamburger
+$hamburger-padding-x: 13px;
+$hamburger-padding-y: 13px;
+$hamburger-layer-width: 40px;
+$hamburger-layer-height: 4px;
+$hamburger-layer-spacing: 6px;
+// $hamburger-layer-color: $white-color;
+$hamburger-layer-border-radius: 4px;
+$hamburger-hover-opacity: 0.7;
+$hamburger-hover-transition-duration: 0.15s;
+$hamburger-hover-transition-timing-function: linear;

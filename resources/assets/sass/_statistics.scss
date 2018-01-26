@@ -1,0 +1,41 @@
+.statistics-container {
+    min-height: 250px;
+    width: 100%;
+    background: $color9;
+    >.container {
+        margin: 0 auto;
+        @media (min-width: 576px) {
+            padding-top: 40px;
+        }
+    }
+    &:hover > .container .stats-box .stats-icon i.fa {
+        text-shadow: .05px .05px 7px $color4;
+    }
+}
+
+.stats-box {
+    text-align: center;
+    .stats-info {
+        p,
+        span {
+            font-family: $lato-font;
+        }
+        p {
+            padding: 10px;
+            font-size: .6rem;
+            span {
+                color: $color3;
+                display: block;
+                font-size: 1.4rem;
+                font-weight: 800;
+            }
+        }
+    }
+    .stats-icon {
+        i.fa {
+            font-size: 2.5rem;
+            color: $color3;
+            transition: all .3s ease-in-out;
+        }
+    }
+}

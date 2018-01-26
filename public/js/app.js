@@ -77,70 +77,175 @@ module.exports = __webpack_require__(2);
 
 
 $(document).ready(function () {
-	// $('#page').fullpage({
-	// 	//Navigation
-	// 	anchors: ['/', 'about', 'portfolio', 'services', 'contact'],
-	// 	lockAnchors: true,
 
-	// 	//Scrolling
+	// contact page
+	// contact page
+	// contact page
+	// contact page
 
-	// 	scrollingSpeed: 700,
-
-
-	// 	//Accessibility
-	// 	keyboardScrolling: true,
-	// 	animateAnchor: true,
-	// 	recordHistory: true,
-
-	// 	//Design
-
-	// 	parallax: true,
-
-	// 	//Custom selectors
-	// 	sectionSelector: '.section',
-	// 	slideSelector: '.slide',
-
-	// 	lazyLoading: true,
-
-	// 	//events
-	// 	onLeave: function(index, nextIndex, direction){},
-	// 	afterLoad: function(anchorLink, index){
-	// 		var pages = {	1: '/',
-	// 		2: '/about',
-	// 		3: '/portfolio',
-	// 		4: '/services',
-	// 		5: '/contact' };
-
-
-	// 		$.fn.fullpage.moveTo(pages[index], 1);
-	// 		history.replaceState(pages[index], '', pages[index]);
-
-	// 		activeNavbar($('li[data-menuanchor="' + anchorLink + '"]').children('a'));
-
-	// 	}
-	// });
-
-	// add active classes to the navbar
-	// add active classes to the navbar
-	// add active classes to the navbar
-	// add active classes to the navbar
-	// add active classes to the navbar
-	// add active classes to the navbar
-	// add active classes to the navbar
-	// add active classes to the navbar
-	// add active classes to the navbar
-	// add active classes to the navbar
-	// add active classes to the navbar
-	// add active classes to the navbar
-
-
-	$('.hamburger, nav.nav-box').click(function () {
-		$('nav.nav-box').toggleClass('desktop');
+	$.ajaxSetup({
+		headers: {
+			'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+		}
 	});
+
+	// hide contact loader after ajax call ends
+	$(document).ajaxComplete(function () {
+		$('#contact-loading-box').css({
+			'opacity': 0
+		});
+		$('#contact-submit').prop('disabled', false);
+	});
+
+	var contactform = $('#contact-form');
+
+	$('#contact-submit').click(function (e) {
+
+		validated = contactform[0].checkValidity();
+
+		if (validated) {
+			$('#contact-submit').prop('disabled', true);
+
+			$('#contact-loading-box').css({
+				'opacity': 1
+			});
+			e.preventDefault();
+
+			$.ajax({
+				url: '/rest-api/contact/store',
+				type: "post",
+				dataType: 'JSON',
+				data: {
+					'name': $('input[name="name"]').val(),
+					'email': $('input[name="email"]').val(),
+					'message': $('textarea[name="message"]').val()
+				},
+				success: function success(data) {
+					message = data.message;
+					var msg = message.toString().replace(',', '<br />');
+
+					if (data.type == 'error') {
+
+						iziToast.error({
+							message: msg,
+							position: 'bottomRight'
+						});
+					} else {
+
+						iziToast.show({
+							theme: 'dark',
+							icon: 'fa fa-check',
+							iconColor: 'lightgreen',
+							message: msg,
+							position: 'topCenter'
+						});
+						contactform.find('input, textarea').val('');
+					}
+				},
+				error: function error() {
+					iziToast.error({
+						message: 'Message wasn\'t sent, please try again later.',
+						position: 'bottomRight' // bottomRight, bottomLeft, topRight, topLeft, topCenter, bottomCenter
+					});
+				}
+
+			});
+		}
+	});
+
+	// language dropdown
+	// language dropdown
+	// language dropdown
+	// language dropdown
+
+
+	$('.language-box').click(function () {
+		$(this).children('.language-dropdown-list').toggleClass('active');
+	});
+
+	// navbar active effects
+	// navbar active effects
+	// navbar active effects
+	// navbar active effects
+	// navbar active effects
 
 	$(document).on("scroll", onScroll);
 
 	//smoothscroll
+
+
+	mobile = $(window).width() > 768 ? true : false;
+	$(window).resize(function () {
+		mobile = $(window).width() > 768 ? true : false;
+	});
+
+	function onScroll(event, sectionHome) {
+		var sectionHome = $('section#home').height();
+		var navHeight = $('nav.nav-box').height();
+		var scrollPos = $(document).scrollTop();
+
+		var navLinkColor = $('ul#menu li a');
+		// if ((sectionHome - navHeight - 16) <= scrollPos && mobile) {
+		if (navHeight - 16 <= scrollPos && mobile) {
+
+			$('nav.nav-box').addClass('active').addClass('shadow-6');
+			navLinkColor.removeClass('white');
+			$('.logo#logo-navbar p').addClass('logo-active');
+		} else {
+
+			$('nav.nav-box').removeClass('active').removeClass('shadow-6');
+			navLinkColor.addClass('white');
+			$('.logo#logo-navbar p').removeClass('logo-active');
+		}
+
+		$('#menu li a').each(function () {
+			var navHeight = $('nav.nav-box').height();
+			var currLink = $(this);
+			var refElement = $(currLink.attr("href"));
+
+			if (refElement.position().top <= scrollPos + 60 && refElement.position().top + refElement.height() > scrollPos + 48) {
+				$('#menu li a').removeClass("active");
+				currLink.addClass("active");
+			} else {
+				currLink.removeClass("active");
+			}
+		});
+	};
+
+	// hover effect on portfolio
+	// hover effect on portfolio
+	// hover effect on portfolio
+	// hover effect on portfolio
+	// hover effect on portfolio
+	// hover effect on portfolio
+
+
+	$('.project-box').bind({
+		mouseover: function mouseover() {
+
+			if (mobile) {
+
+				$(this).css({ 'transform': 'scale(1.05)' });
+				$('.project-box').not($(this)).css({ 'transform': 'scale(.95)' });
+			}
+		},
+		mouseout: function mouseout() {
+			$('.project-box').css({ 'transform': 'scale(1)' });
+		}
+	});
+
+	// ACTIVATE NAVAR ON MOBILE
+	// ACTIVATE NAVAR ON MOBILE
+	// ACTIVATE NAVAR ON MOBILE
+	// ACTIVATE NAVAR ON MOBILE
+
+	$('.hamburger').click(function () {
+		$('.hamburger').toggleClass('is-active');
+		$('nav.nav-box').toggleClass('desktop');
+
+		$('body').toggleClass('no-scroll');
+	});
+
 	$('a[data-nav="true"]').on('click', function (e) {
 		e.preventDefault();
 		$(document).off("scroll");
@@ -149,6 +254,12 @@ $(document).ready(function () {
 			$(this).removeClass('active');
 		});
 		$(this).addClass('active');
+
+		if (!mobile) {
+			$('.hamburger').toggleClass('is-active');
+			$('nav.nav-box').toggleClass('desktop');
+			$('body').toggleClass('no-scroll');
+		}
 
 		var target = this.hash,
 		    menu = target;
@@ -161,53 +272,72 @@ $(document).ready(function () {
 		});
 	});
 
-	function onScroll(event) {
-		var scrollPos = $(document).scrollTop();
-		$('#menu li a').each(function () {
-			var navHeight = $('nav.nav-box').height();
-			var currLink = $(this);
-			var refElement = $(currLink.attr("href"));
-			if (refElement.position().top <= scrollPos + navHeight && refElement.position().top + refElement.height() > scrollPos) {
-				$('#menu li a').removeClass("active");
-				currLink.addClass("active");
-			} else {
-				currLink.removeClass("active");
-			}
-		});
-	}
-
-	// activate aos
+	// 
+	// 
+	//  MODALS
+	// 
+	// 
 
 
-	$("#portfolio-modal").iziModal();
+	$(".body-modal").iziModal({
+		// width: 860
+		// 	setGroup: 'portfolios',
+		// 	arrowKeys: true,
+		// 	navigateCaption: true,
+		// 	navigateArrows: true,
+		// 	transitionIn: 'comingIn',
+		// 	transitionOut: 'comingOut',
+		// 	setTitle: 'title0',
+		// 	setFullscreen: true,
+		// 	closeButton: true,
+		// 	onOpening: function (modal) {
+		// 		modal.startLoading();
+		// 		var modalId = modal.id.charAt(modal.id.length - 1);
+		// 		var modalContainer = $('#body-modal-' + modalId + ' .iziModal-content .container');
+		// 		var alreadyLoaded = modalContainer.children('h2').text() === ''  ? false : true;
 
-	mobile = $(window).width() > 768 ? true : false;
-	$(window).resize(function () {
-		mobile = $(window).width() > 768 ? true : false;
+
+		// 		if(!alreadyLoaded) {
+
+		// 			$.get('/rest-api/portfolio/' + modalId, function (data) {
+
+
+		// 				modalContainer.children('h2').text(data.project_name);
+
+		// 				for (i = 0; i < data.images.length; i++) {
+		// 					if (i > 0) {
+
+		// 						modalContainer.children('.row').children('.modal-images-box').children('.modal-secondary-image').append('<div class="col-md-3"><img class="img-responsive" src="' + data.images[i].image_url + '" /></div>');
+		// 					} else {
+		// 						modalContainer.children('.row').children('.modal-images-box').children('.modal-main-image').append('<div class="col-md-12"><img class="img-responsive" src="' + data.images[i].image_url + '" /></div>');
+		// 					}
+		// 				}
+
+
+		// 			});
+		// 		}
+		// 		modal.stopLoading();
+		// 	}
+
+
 	});
 
-	// hover effect on portfolio
-	$('.project-box').bind({
-		mouseover: function mouseover() {
-
-			if (mobile) {
-
-				$(this).css({ 'transform': 'scale(1.4)' });
-				$('.project-box').not($(this)).css({ 'transform': 'scale(.7)' });
-			}
-		},
-		mouseout: function mouseout() {
-			$('.project-box').css({ 'transform': 'scale(1)' });
+	function getImages(images) {
+		array = [];
+		for (i = 0; i < images.length; i++) {
+			array[i] = images[i].image_url;
 		}
-	});
-});
+		return array;
+	};
+}); // end doc ready
 
-function showPage() {
-	$("#wrapper").show();
-	$("#loading-box").hide();
-}
 
 $(window).on('load', function () {
+
+	function showPage() {
+		$("#wrapper").show();
+		$("#loading-box").hide();
+	}
 	showPage();
 	window.sr = ScrollReveal();
 
