@@ -29,6 +29,7 @@ class ContactMail extends Mailable
      */
     public function build()
     {
-        return $this->markdown('mails.contact_user');
+        return $this->subject(\Lang::get('contact.mail_subject_user'))
+                ->markdown('mails.contact');
     }
 }

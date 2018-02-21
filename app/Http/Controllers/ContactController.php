@@ -3,20 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\Contact;
-use Illuminate\Http\Request;
-
 use App\Mail\ContactMail;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Validator;
 
 class ContactController extends Controller
 {
 
-
     public function sendContact(Request $request)
     {
-        $fail = json_encode(["type" => "error",
-            "message" => "An error occured, please try again later!",
-        ]);
 
         $validate = Validator::make(request()->all(),
             [
@@ -28,15 +24,17 @@ class ContactController extends Controller
 
         if ($validate->passes()) {
 
-            Contact::create(request(['name', 'email', 'message']));
-
-            $data =  [
+            $data = [
                 'name' => $request->name,
                 'email' => $request->email,
-                'message' => $request->message
+                'message' => $request->message,
             ];
-            
-            \Mail::to($request->email)->send(new ContactMail($data));
+
+            Contact::create($data);
+
+
+            // send confirmation email to user
+            Mail::to($request->email)->send(new ContactMail($data));
 
 
             return response()->json([
@@ -44,7 +42,6 @@ class ContactController extends Controller
                 'message' => \Lang::get('contact.message_sent'),
             ]);
         }
-
 
         return response()->json([
             'type' => 'error',

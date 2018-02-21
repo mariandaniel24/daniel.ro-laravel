@@ -1,7 +1,6 @@
 @component('mail::message')
-# @lang('contact.mail_hello') {{ $data['name'] }} 
+# Mesaj nou de la: {{ $data['name'] }} 
 <br>
-# @lang('contact.mail_received')
 <br>
 
 
@@ -12,8 +11,8 @@ Button Text
 @endcomponent  --}}
 
 <br>
-@lang('contact.mail_thanks') <br>
 
 @endcomponent
+
 
 

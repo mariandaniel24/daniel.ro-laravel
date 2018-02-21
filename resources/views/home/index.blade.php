@@ -38,11 +38,11 @@
 	@include ('layouts.home')
 		</section>
 
-		<section id="services" class="section">
+		<section id="services" class="section white-bg">
 	@include ('layouts.services')
 		</section>
 
-		<section id="portfolio" class="section  white-bg">
+		<section id="portfolio" class="section">
 	@include ('layouts.portfolio')
 		</section>
 		<section id="statistics" class="section">
