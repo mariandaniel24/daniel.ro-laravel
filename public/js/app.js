@@ -224,8 +224,8 @@ $(document).ready(function () {
 		autoplay: true,
 		mouseDrag: false,
 		autoplayHoverPause: true,
-		animateOut: 'fadeOutDown',
-		animateIn: 'bounceIn',
+		// animateOut: 'fadeOut',
+		// animateIn: 'fadeIn',
 		items: 1,
 		margin: 30,
 		stagePadding: 30,
@@ -382,6 +382,7 @@ $(window).on('load', function () {
 		$("#loading-box").hide();
 	}
 	showPage();
+
 	window.sr = ScrollReveal();
 
 	sr.reveal('.title, .project-box');

@@ -2,9 +2,9 @@
     <div class="footer-box">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-4">
-                    <div class="social-box text-left">
-                        <p>My social media</p>
+                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-3">
+                    <div class="social-box">
+                        <p class="footer-text">My social media</p>
                         <ul class="social-list">
                             <li>
                                 <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
@@ -19,10 +19,10 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="copyright-box text-right">
-                        <p>
-                            copyright text Lorem ipsum dolor sit amet, consectetur.
+                <div class="col-xs-6 col-sm-4 col-md-4 col-lg-3">
+                    <div class="copyright-box">
+                        <p class="footer-text">
+                            @lang('footer.copyright')
                         </p>
                     </div>
                 </div>

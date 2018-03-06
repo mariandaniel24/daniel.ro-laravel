@@ -20,10 +20,11 @@
         color: #000;
         -webkit-box-sizing: content-box;
         box-sizing: content-box;
+        // overflow: scroll;
     }
 
     h1 {
-        font-weight: 600;
+        font-weight: 400;
     }
 
     @media (max-width: 768px) {
@@ -129,7 +130,7 @@
             background: rgba(255, 255, 255, 0.1);
             left: 0px;
             top: 125px;
-            overflow: hidden;
+            // overflow: hidden;
             height: 0px;
             -webkit-transition: all .3s ease;
             transition: all .3s ease;
@@ -158,7 +159,7 @@
         left: 15px;
         position: absolute;
         display: none;
-        z-index: 1001;
+        // z-index: 1001;
         p {
             padding: 4px;
             border: 2px solid $social-color;
@@ -226,18 +227,19 @@
                     width: 100px;
                     display: inline-block;
                     color: $color6;
+                    // text-shadow: 1px 0px $color7;
                     &.white {
                         color: #fff !important;
                     }
                     &.active,
                     &:hover {
-                        color: #36f1cd !important;
+                        color: rgba(22,246,205, 1) !important;
                     }
                     &:after,
                     &:before {
                         display: block;
                         content: '';
-                        border-bottom: solid 2px #36f1cd;
+                        border-bottom: solid 2px rgba(22,246,205, 1);
                         -webkit-transform: scaleX(0);
                         transform: scaleX(0);
                         -webkit-transition: -webkit-transform 250ms ease-in-out;
@@ -265,7 +267,7 @@
             opacity: 1;
             -webkit-transition: all 0.4s linear;
             transition: all 0.4s linear;
-            overflow: hidden;
+            // overflow: hidden;
             &.desktop {
                 right: -100%;
                 opacity: .8;
@@ -329,6 +331,7 @@
         font-size: 2rem;
         font-weight: 900;
         letter-spacing: 1px;
+        color: $color9;
         @media (max-width: 768px) {
             font-size: 1.4rem;
         }
@@ -343,7 +346,7 @@
         }
         &:after {
             content: '';
-            border-bottom: 4px solid #2e282a;
+            border-bottom: 4px solid $color9;
             display: block;
             width: 42px;
             margin: 18px auto 0 auto;
@@ -461,7 +464,7 @@
 
     @keyframes dash {
         0% {
-            stroke-dashoffset: 187;
+            stroke-dashoffset: 187; 
         }
         50% {
             stroke-dashoffset: 46.75;
@@ -545,12 +548,13 @@
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
         -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        &:hover {
+
+            -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+        }
     }
 
-    .shadow-1:hover {
-        -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-    }
 
     .shadow-2 {
         -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
@@ -605,7 +609,7 @@
         background-color: transparent;
         border: 0;
         margin: 0;
-        overflow: visible;
+        // overflow: visible;
         @media (min-width: 768px) {
             display: none;
         }

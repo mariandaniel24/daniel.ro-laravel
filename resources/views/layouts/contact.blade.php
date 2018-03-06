@@ -32,17 +32,14 @@
 						<div class="col-sm-12 col-md-12 footer-bg">
 							<div class="form-group">
 								<button class="primary" id="contact-submit">@lang('contact.send_message') 
-
 									
 <div id="contact-loading-box" class="hide">
 										<svg class="contact-loading-icon" width="100%" height="100%" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
 											<circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
 										</svg>
 									</div>
-
 								
 							</button>
-							
 							</div>
 						</div>
 					</div>
@@ -50,5 +47,4 @@
 			</div>
 		</div>
 	</div>
-</div>
 </div>

@@ -1,26 +1,37 @@
 footer.footer {
     width: 100%;
-    height: 150px;
+    height: 250px;
     background: $color1;
-    position: relative;
+    // position: relative;
+    .footer-box {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+
+.footer-text {
+    display: inline-block;
 }
 
 ul.social-list {
     height: 100%;
-    margin-top: 20px;
+    // margin-top: 20px;
+
     li {
         
         display: inline;
         margin: 0 2px;
         a {
             display: inline-block;
-            text-align: center;
+            // text-align: center;
             i.fa {
                 border-radius: 50%;
                 width: 38px;
                 height: 38px; // border: 1px solid rgba(255, 255, 255, .3);
                 vertical-align: middle;
-                line-height: 38px;
+                line-height: 10px;
                 font-size: 1.3rem;
                 
                 transition: all .3s;
@@ -57,5 +68,12 @@ ul.social-list {
 
             }
         }
+    }
+}
+
+.copyright-box {
+    @media (max-width: 350px) {
+        // padding-top: 30px;
+        
     }
 }

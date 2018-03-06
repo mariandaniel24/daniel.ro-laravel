@@ -170,8 +170,8 @@ $(document).ready(function () {
 		autoplay: true,
 		mouseDrag: false,
 		autoplayHoverPause: true,
-		animateOut: 'fadeOutDown',
-		animateIn: 'bounceIn',
+		// animateOut: 'fadeOut',
+		// animateIn: 'fadeIn',
 		items: 1,
 		margin: 30,
 		stagePadding: 30,
@@ -284,7 +284,6 @@ $(document).ready(function () {
 
 
 
-
 	// hover effect on portfolio
 	// hover effect on portfolio
 
@@ -374,9 +373,7 @@ $(document).ready(function () {
 
 
 
-
 }); // end doc ready
-
 
 
 
@@ -420,11 +417,15 @@ $(document).ready(function () {
 
 $(window).on('load', function () {
 
+
+
 	function showPage() {
 		$("#wrapper").show();
 		$("#loading-box").hide();
 	}
 	showPage();
+
+
 	window.sr = ScrollReveal();
 
 	sr.reveal('.title, .project-box');

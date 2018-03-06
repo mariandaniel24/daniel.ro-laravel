@@ -4236,7 +4236,7 @@ header.header-standard .title-box h1.title.daniel {
 
 @media (min-width: 768px) {
   .services-box {
-    border-top: 1px solid rgba(0, 0, 0, 0.09);
+    border-top: 1px solid #bbc0c4;
     height: 100px;
     margin-top: 150px;
   }
@@ -4290,14 +4290,31 @@ header.header-standard .title-box h1.title.daniel {
   font-weight: 700;
   color: #506a85;
   background: #fff;
-  border: 1px solid #73879c;
   cursor: pointer;
+  border: 1px solid;
 }
 
 @media (min-width: 768px) {
   .service-list-item a.service-tab {
     border-radius: 50%;
     padding-top: 55px;
+    border-color: #73879c;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-list-item a.service-tab {
+    line-height: 60px;
+    border-color: rgba(0, 0, 0, 0.09);
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+
+  .service-list-item a.service-tab:hover {
+    -webkit-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25), 0 5px 10px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25), 0 5px 10px rgba(0, 0, 0, 0.22);
   }
 }
 
@@ -4660,14 +4677,21 @@ button.primary:before {
 
 footer.footer {
   width: 100%;
-  height: 150px;
+  height: 250px;
   background: #242729;
-  position: relative;
+}
+
+footer.footer .footer-box {
+  width: 100%;
+  height: 100%;
+}
+
+.footer-text {
+  display: inline-block;
 }
 
 ul.social-list {
   height: 100%;
-  margin-top: 20px;
 }
 
 ul.social-list li {
@@ -4677,7 +4701,6 @@ ul.social-list li {
 
 ul.social-list li a {
   display: inline-block;
-  text-align: center;
 }
 
 ul.social-list li a i.fa {
@@ -4685,7 +4708,7 @@ ul.social-list li a i.fa {
   width: 38px;
   height: 38px;
   vertical-align: middle;
-  line-height: 38px;
+  line-height: 10px;
   font-size: 1.3rem;
   -webkit-transition: all .3s;
   transition: all .3s;
@@ -4718,7 +4741,7 @@ body {
 }
 
 h1 {
-  font-weight: 600;
+  font-weight: 400;
 }
 
 @media (max-width: 768px) {
@@ -4840,7 +4863,6 @@ body {
   background: rgba(255, 255, 255, 0.1);
   left: 0px;
   top: 125px;
-  overflow: hidden;
   height: 0px;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
@@ -4871,7 +4893,6 @@ body {
   left: 15px;
   position: absolute;
   display: none;
-  z-index: 1001;
 }
 
 .logo p {
@@ -4960,14 +4981,14 @@ nav.nav-box ul li a {
 
   nav.nav-box ul li a.active,
   nav.nav-box ul li a:hover {
-    color: #36f1cd !important;
+    color: #16f6cd !important;
   }
 
   nav.nav-box ul li a:after,
   nav.nav-box ul li a:before {
     display: block;
     content: '';
-    border-bottom: solid 2px #36f1cd;
+    border-bottom: solid 2px #16f6cd;
     -webkit-transform: scaleX(0);
     transform: scaleX(0);
     -webkit-transition: -webkit-transform 250ms ease-in-out;
@@ -4993,7 +5014,6 @@ nav.nav-box ul li a {
     opacity: 1;
     -webkit-transition: all 0.4s linear;
     transition: all 0.4s linear;
-    overflow: hidden;
   }
 
   nav.nav-box.desktop {
@@ -5067,6 +5087,7 @@ nav.nav-box ul li a {
   font-size: 2rem;
   font-weight: 900;
   letter-spacing: 1px;
+  color: #121e2c;
 }
 
 @media (max-width: 768px) {
@@ -5091,7 +5112,7 @@ nav.nav-box ul li a {
 
 .page-title:after {
   content: '';
-  border-bottom: 4px solid #2e282a;
+  border-bottom: 4px solid #121e2c;
   display: block;
   width: 42px;
   margin: 18px auto 0 auto;
@@ -5374,7 +5395,6 @@ hr {
   background-color: transparent;
   border: 0;
   margin: 0;
-  overflow: visible;
 }
 
 @media (min-width: 768px) {

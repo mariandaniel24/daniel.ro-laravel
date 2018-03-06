@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 <body>
+  
   @yield('main')
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animateCSS/1.2.2/jquery.animatecss.min.js"></script>
@@ -27,7 +28,7 @@
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/js/iziModal.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.2.0/js/iziToast.min.js"></script>
-  <script src="/js/app.js"></script>
+<script src="{{asset('js/app.js')}}"></script>
   {{--
   <script src="/js/jquery.easings.min.js"></script>
   <script src="/js/scrolloverflow.min.js"></script>
