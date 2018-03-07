@@ -1,12 +1,12 @@
 .statistics-container {
-    min-height: 250px;
+    min-height: 220px;
     width: 100%;
     background: $color9;
     >.container {
         margin: 0 auto;
-        @media (min-width: 576px) {
+        // @media (min-width: 576px) {
             padding-top: 40px;
-        }
+        // }
     }
     &:hover > .container .stats-box .stats-icon i.fa {
         text-shadow: .05px .05px 7px $color4;

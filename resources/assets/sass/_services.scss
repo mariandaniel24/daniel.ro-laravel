@@ -63,7 +63,7 @@
             .services-box {
                 border-top: 1px solid $color7;
                 height: 100px;
-                margin-top: 150px;
+                margin-top: 100px;
             }
             .service-list-item {
                 height: 140px;
@@ -101,7 +101,7 @@
                 @media (min-width: 768px) {
                     border-radius: 50%;
                     padding-top: 55px;
-                    border-color: $services-color;
+                    border-color: $services-color-light;
                 }
                 @media (max-width: 768px) {
                     line-height: 60px;
@@ -171,7 +171,7 @@
             }
             ul li p,
             p {
-                font-size: .77rem;
+                font-size: .74rem;
                 line-height: 22px;
                 display: block;
                 margin: 5px auto;

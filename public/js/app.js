@@ -222,7 +222,7 @@ $(document).ready(function () {
 	// owl carousel
 	$('.owl-carousel').owlCarousel({
 		autoplay: true,
-		mouseDrag: false,
+		mouseDrag: true,
 		autoplayHoverPause: true,
 		// animateOut: 'fadeOut',
 		// animateIn: 'fadeIn',
@@ -309,6 +309,15 @@ $(document).ready(function () {
 		});
 	};
 
+	// typing title
+	var app = document.getElementById('title-rotate');
+
+	var typewriter = new Typewriter(app, {
+		loop: true
+	});
+
+	typewriter.typeString('landing pages.').pauseFor(2000).deleteAll().typeString('websites.').pauseFor(2000).deleteChars(6).typeString(' applications.').pauseFor(2000).deleteAll().typeString('user interfaces.').pauseFor(2000).deleteAll().start();
+
 	// hover effect on portfolio
 	// hover effect on portfolio
 
@@ -372,6 +381,9 @@ $(document).ready(function () {
 		}
 		return array;
 	};
+
+	// 
+
 }); // end doc ready
 
 

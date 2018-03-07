@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600|Poiret+One|Open+Sans|Lato|Asap|Play);html,
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600|Poiret+One|Open+Sans|Lato|Asap|Play|Montserrat);html,
 body,
 div,
 span,
@@ -4132,7 +4132,7 @@ header.header-standard {
   width: 100%;
   height: 100vh;
   background: url("https://i.imgur.com/h6WcDv5.jpg");
-  min-height: 500px;
+  min-height: 300px;
   width: auto;
   vertical-align: middle;
   background-repeat: no-repeat;
@@ -4143,23 +4143,93 @@ header.header-standard {
 }
 
 header.header-standard .title-box {
+  width: 100%;
   position: absolute;
-  bottom: 34%;
-  left: 50px;
+  top: 40%;
+  left: 40%;
+  -webkit-transform: translateX(-40%) translateY(-40%);
+          transform: translateX(-40%) translateY(-40%);
 }
 
 header.header-standard .title-box h1.title {
-  font-family: "Poiret One";
+  font-family: "Montserrat";
   color: #fff;
-  padding: 12px 0;
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
   text-align: center;
+  line-height: 28px;
+  display: block;
+}
+
+@media (max-width: 378px) {
+  header.header-standard .title-box h1.title {
+    font-size: .9rem;
+  }
+}
+
+header.header-standard .title-box h1.title > * {
+  font-size: inherit;
+}
+
+@media (max-width: 370px) {
+  header.header-standard .title-box h1.title > span.design {
+    display: block;
+  }
+}
+
+header.header-standard .title-box h1.title > span.web {
+  display: block;
+  font-weight: bolder;
+  font-family: "Montserrat";
 }
 
 header.header-standard .title-box h1.title.daniel {
   margin: 40px 0 0 100px;
   width: 50%;
+}
+
+.resume-button {
+  margin: 40px auto 0 auto;
+  max-width: 250px;
+  text-decoration: none;
+  color: #fff;
+  padding: 18px 80px;
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  font-size: .8rem;
+  font-family: "Raleway";
+  background: rgba(0, 0, 0, 0.09);
+  -webkit-box-shadow: #fff 0px 0px 0px 1px, #fff 0px 0px 0px 1px;
+          box-shadow: #fff 0px 0px 0px 1px, #fff 0px 0px 0px 1px;
+  border-radius: 25px;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.resume-button:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.learn-more-box {
+  width: 100%;
+  position: absolute;
+  left: 40%;
+  bottom: 3%;
+  -webkit-transform: translateX(-40%) translateY(-3%);
+          transform: translateX(-40%) translateY(-3%);
+  text-align: center;
+}
+
+.learn-more-box a {
+  color: #fff;
+  text-decoration: none;
+  font-family: "Montserrat";
+  font-weight: 100;
+  font-size: .9rem;
+}
+
+.learn-more-box a i {
+  display: block;
+  color: #fff;
 }
 
 .service-col {
@@ -4238,7 +4308,7 @@ header.header-standard .title-box h1.title.daniel {
   .services-box {
     border-top: 1px solid #bbc0c4;
     height: 100px;
-    margin-top: 150px;
+    margin-top: 100px;
   }
 
   .service-list-item {
@@ -4298,7 +4368,7 @@ header.header-standard .title-box h1.title.daniel {
   .service-list-item a.service-tab {
     border-radius: 50%;
     padding-top: 55px;
-    border-color: #73879c;
+    border-color: rgba(115, 135, 156, 0.45);
   }
 }
 
@@ -4358,7 +4428,7 @@ header.header-standard .title-box h1.title.daniel {
 
 .services-info-box ul li p,
 .services-info-box p {
-  font-size: .77rem;
+  font-size: .74rem;
   line-height: 22px;
   display: block;
   margin: 5px auto;
@@ -4430,19 +4500,14 @@ header.header-standard .title-box h1.title.daniel {
 }
 
 .statistics-container {
-  min-height: 250px;
+  min-height: 220px;
   width: 100%;
   background: #121e2c;
 }
 
 .statistics-container > .container {
   margin: 0 auto;
-}
-
-@media (min-width: 576px) {
-  .statistics-container > .container {
-    padding-top: 40px;
-  }
+  padding-top: 40px;
 }
 
 .statistics-container:hover > .container .stats-box .stats-icon i.fa {
@@ -4517,6 +4582,13 @@ label {
 
 .form-group > * {
   display: block;
+}
+
+@media (min-width: 350px) and (max-width: 768px) {
+  .form-group {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 
 .text-input {
@@ -4677,8 +4749,10 @@ button.primary:before {
 
 footer.footer {
   width: 100%;
-  height: 250px;
-  background: #242729;
+  height: 170px;
+  background: #171717;
+  position: relative;
+  padding-top: 20px;
 }
 
 footer.footer .footer-box {
@@ -4687,7 +4761,7 @@ footer.footer .footer-box {
 }
 
 .footer-text {
-  display: inline-block;
+  font-size: 14px;
 }
 
 ul.social-list {
@@ -4696,11 +4770,12 @@ ul.social-list {
 
 ul.social-list li {
   display: inline;
-  margin: 0 2px;
+  margin: 0 0px;
 }
 
 ul.social-list li a {
   display: inline-block;
+  text-align: center;
 }
 
 ul.social-list li a i.fa {
@@ -4708,7 +4783,7 @@ ul.social-list li a i.fa {
   width: 38px;
   height: 38px;
   vertical-align: middle;
-  line-height: 10px;
+  line-height: 38px;
   font-size: 1.3rem;
   -webkit-transition: all .3s;
   transition: all .3s;
@@ -4731,6 +4806,11 @@ ul.social-list li a i.fa.fa-twitter:hover {
   color: #1DA1F2;
 }
 
+.copyright-box {
+  padding-top: 70px;
+  text-align: center;
+}
+
 html,
 body {
   font-size: 18px;
@@ -4750,9 +4830,15 @@ h1 {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1200px) {
   h1 {
-    font-size: 2.2rem;
+    font-size: 1.65rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 2rem;
   }
 }
 
@@ -4863,6 +4949,7 @@ body {
   background: rgba(255, 255, 255, 0.1);
   left: 0px;
   top: 125px;
+  overflow: hidden;
   height: 0px;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
@@ -4927,8 +5014,6 @@ body {
 
 nav.nav-box {
   z-index: 200;
-  -webkit-transition: all .3s;
-  transition: all .3s;
 }
 
 nav.nav-box ul li {
@@ -4957,9 +5042,10 @@ nav.nav-box ul li a {
   }
 
   nav.nav-box.active {
-    background: #fff !important;
+    background: #f2f2f2 !important;
     -webkit-transition: all .3s;
     transition: all .3s;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.09);
   }
 
   nav.nav-box ul {
@@ -5012,15 +5098,14 @@ nav.nav-box ul li a {
     background: rgba(0, 0, 0, 0.97);
     right: 0;
     opacity: 1;
-    -webkit-transition: all 0.4s linear;
-    transition: all 0.4s linear;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    overflow: hidden;
   }
 
   nav.nav-box.desktop {
     right: -100%;
     opacity: .8;
-    -webkit-transition: all 0.4s linear;
-    transition: all 0.4s linear;
   }
 
   nav.nav-box ul {
@@ -5085,7 +5170,7 @@ nav.nav-box ul li a {
 .page-title {
   font-family: "Raleway";
   font-size: 2rem;
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: 1px;
   color: #121e2c;
 }
@@ -5395,6 +5480,7 @@ hr {
   background-color: transparent;
   border: 0;
   margin: 0;
+  overflow: visible;
 }
 
 @media (min-width: 768px) {

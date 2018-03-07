@@ -1,46 +1,90 @@
 // header
-	header.header-standard {
-		width: 100%;
-		height: 100vh;
-		background: $header-image;
-		min-height: 500px;
-		width: auto;
-
-		vertical-align: middle;
-		background-repeat: no-repeat ;
-		background-position: 48% 45% ;
-		background-color: $color1;
-		background-size: cover;
-		position: relative;
-		
-
-
-
-		.title-box {
-			position: absolute;
-			bottom: 34%;
-			left: 50px;
-
-			h1.title	{
-				font-family: $logo-font;
-
-				color: $white-color;
-				padding: 12px 0;
-				border-top: 1px solid $white-color;
-				border-bottom: 1px solid $white-color;
-
-				text-align: center;
-				&.daniel {
-					margin: 40px 0 0 100px;
-					width: 50%;
-				}
-				&.web {
-
-				}
-
-
+header.header-standard {
+    width: 100%;
+    height: 100vh;
+    background: $header-image;
+    min-height: 300px;
+    width: auto;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: 48% 45%;
+    background-color: $color1;
+    background-size: cover;
+    position: relative;
+    .title-box {
+        width: 100%;
+        position: absolute;
+        top: 40%;
+        left: 40%;
+        transform: translateX(-40%) translateY(-40%);
+        h1.title {
+            font-family: $title-font;
+            color: $white-color;
+            text-align: center;
+            line-height: 28px;
+			display: block;
+			@media (max-width: 378px) {
+				font-size: .9rem;
 			}
 
+			>* {
+				font-size: inherit;
+			}
+            >span.design {
+                @media (max-width: 370px) {
+                    display: block;
+                }
+            }
+            >span.web {
+                display: block;
+                font-weight: bolder;
+                // padding-top: 5px; // font-size: 1.4rem;
+                font-family: $title-font;
+            }
+            &.daniel {
+                margin: 40px 0 0 100px;
+                width: 50%;
+            }
+        }
+    }
+}
 
-		}
-	}
+.resume-button {
+    margin: 40px auto 0 auto;
+    max-width: 250px;
+    text-decoration: none;
+    color: #fff;
+    padding: 18px 80px;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: .8rem;
+    font-family: $raleway-font;
+    background: $hr-color;
+    box-shadow: $white-color 0px 0px 0px 1px, $white-color 0px 0px 0px 1px;
+    border-radius: 25px;
+    transition: all .3s ease;
+    &:hover {
+        color: rgba(255, 255, 255, .7);
+    }
+}
+
+.learn-more-box {
+    width: 100%;
+    position: absolute;
+    left: 40%;
+    bottom: 3%;
+    transform: translateX(-40%) translateY(-3%);
+    text-align: center;
+    a {
+        color: #fff;
+        text-decoration: none;
+		font-family: $title-font;
+		font-weight: 100;
+		font-size: .9rem;
+        i {
+            display: block;
+            color: #fff;
+        }
+    }
+}

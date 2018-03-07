@@ -75,7 +75,7 @@
 
 
 			<!-- Footer section -->
-		<section id="footer" class="section ">
+		<section id="footer" class="section footer-bg">
 	@include ('layouts.footer')
 		</section>
 

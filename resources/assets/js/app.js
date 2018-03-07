@@ -165,10 +165,10 @@ $(document).ready(function () {
 
 
 
-// owl carousel
+	// owl carousel
 	$('.owl-carousel').owlCarousel({
 		autoplay: true,
-		mouseDrag: false,
+		mouseDrag: true,
 		autoplayHoverPause: true,
 		// animateOut: 'fadeOut',
 		// animateIn: 'fadeIn',
@@ -181,7 +181,7 @@ $(document).ready(function () {
 		onInitialized: startProgressBar,
 		onTranslate: resetProgressBar,
 		onTranslated: startProgressBar
-		
+
 	});
 
 
@@ -190,27 +190,26 @@ $(document).ready(function () {
 		if (!$(this).hasClass('tab-button-active')) {
 			// get current pressed tab
 			var current_tab = $(this).attr('data-tab-index');
-			
-			
+
+
 			// remove old active classes
 			// $('.tab-section').removeClass('tab-active');
-			
+
 			// add active classes to clicked tab and container
 			$('.owl-carousel').trigger('to.owl.carousel', current_tab);
 			$('.service-list-item').removeClass('tab-button-active')
-			
-			
+
+
 			$(this).addClass('tab-button-active')
 			// $('#' + current_tab).addClass('tab-active');
-			
+
 		}
 	});
 
 	$('.owl-carousel').on('changed.owl.carousel', function (e) {
 		$('.service-list-item').removeClass('tab-button-active');
-		$('.service-list-item[data-tab-index="'+ e.item.index +'"]').addClass('tab-button-active');
-});
-
+		$('.service-list-item[data-tab-index="' + e.item.index + '"]').addClass('tab-button-active');
+	});
 
 
 
@@ -278,8 +277,26 @@ $(document).ready(function () {
 	};
 
 
+	// typing title
+	var app = document.getElementById('title-rotate');
 
+	var typewriter = new Typewriter(app, {
+		loop: true
+	});
 
+	typewriter.typeString('landing pages.')
+		.pauseFor(2000)
+		.deleteAll()
+		.typeString('websites.')
+		.pauseFor(2000)
+		.deleteChars(6)
+		.typeString(' applications.')
+		.pauseFor(2000)
+		.deleteAll()
+		.typeString('user interfaces.')
+		.pauseFor(2000)
+		.deleteAll()
+		.start();
 
 
 
@@ -302,8 +319,6 @@ $(document).ready(function () {
 
 		}
 	});
-
-
 
 
 
@@ -350,7 +365,7 @@ $(document).ready(function () {
 
 
 
-// services expand tabs
+	// services expand tabs
 
 
 
@@ -361,7 +376,7 @@ $(document).ready(function () {
 
 
 
-// 
+	// 
 	function getImages(images) {
 		array = [];
 		for (i = 0; i < images.length; i++) {
@@ -369,6 +384,10 @@ $(document).ready(function () {
 		}
 		return array;
 	};
+
+
+
+	// 
 
 
 
