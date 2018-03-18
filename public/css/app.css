@@ -4895,12 +4895,26 @@ body.disable-scroll {
 }
 
 .language-box {
-  position: relative;
+  display: none;
+  position: absolute;
+  left: 100px;
+  top: 0;
+}
+
+@media (min-width: 768px) {
+  .language-box#lang-nav {
+    display: block !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .language-box#lang-header {
+    display: block !important;
+  }
 }
 
 .language-box .language-list {
   position: absolute;
-  top: 70px;
   left: 0;
   width: 55px;
   background: rgba(255, 255, 255, 0.1);
@@ -5054,6 +5068,12 @@ nav.nav-box ul li a {
   nav.nav-box .nav {
     position: relative;
     width: 80%;
+  }
+
+  nav.nav-box div.language {
+    position: absolute;
+    top: 30px;
+    right: 20px;
   }
 
   nav.nav-box ul {

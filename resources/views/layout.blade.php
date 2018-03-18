@@ -21,25 +21,35 @@
 </head>
 <body>
   <div id="wrapper">
-  
     <!-- Navbar -->
     <nav class="nav-box unselectable desktop">
       <div class="container nav">
-  
         <div id="logo-navbar" class="logo">
           <p>Daniel.</p>
         </div>
 
-        
-  
-        
-  
+        <div id="lang-nav" class="language-box shadow-6">
+          <div class="language-list">
+            <a>
+					  <i class="fa fa-flag" aria-hidden="true"></i>
+					@lang('navbar.language_title')
+				  </a>
+          </div>
+          <div class="language-dropdown-list">
+            <div class="language-item-container">
+              <a href="@lang('navbar.other_language_link')">
+						<img class="img-responsive" src="@lang('navbar.other_language_icon')" alt="">
+						@lang('navbar.other_language')
+					  </a>
+            </div>
+          </div>
+        </div>
+
         <div class="hamburger hamburger--elastic js-hamburger">
           <div class="hamburger-box">
             <div class="hamburger-inner"></div>
           </div>
         </div>
-  
         <ul id="menu">
           <li>
             <a data-nav="true" class="white active" href="#home">@lang('navbar.title.home')</a>
@@ -53,63 +63,51 @@
           <li>
             <a data-nav="true" class="white" href="#about">@lang('navbar.title.about')</a>
           </li>
-  
           <li>
             <a data-nav="true" class="white" href="#contact">@lang('navbar.title.contact')</a>
           </li>
         </ul>
       </div>
     </nav>
-  
     <div id="page">
-  
       <!-- First section -->
       <section id="home" class="section ">
   @include ('layouts.home')
       </section>
-  
-  
+
       <!-- Services section -->
       <section id="services" class="section white-bg">
   @include ('layouts.services')
       </section>
-  
-  
+
       <!-- Portfolio section -->
       <section id="portfolio" class="section">
   @include ('layouts.portfolio')
       </section>
-  
-  
+
       <!-- Statistics section -->
       <section id="statistics" class="section">
   @include ('layouts.statistics')
       </section>
-  
-  
+
       <!-- About section -->
       <section id="about" class="section ">
   @include ('layouts.about')
       </section>
-  
-  
+
       <!-- Contact section -->
       <section id="contact" class="section ">
   @include ('layouts.contact')
       </section>
-  
-  
+
       <!-- Footer section -->
       <section id="footer" class="section footer-bg">
   @include ('layouts.footer')
       </section>
-  
-  
-  
+
     </div>
   </div>
-  
-  
+
   <!-- Loading section -->
   <div id="loading-box">
     <div class="loader">
@@ -118,7 +116,6 @@
   		</svg></div>
   </div>
   @yield('main')
-  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/TypewriterJS/1.0.0/typewriter.min.js"></script>
