@@ -31,16 +31,17 @@ header.header-standard {
 				font-size: inherit;
 			}
             >span.design {
-                @media (max-width: 370px) {
-                    display: block;
+				@media (max-width: 370px) {
+					display: block;
                 }
             }
             >span.web {
                 display: block;
                 font-weight: bolder;
-                // padding-top: 5px; // font-size: 1.4rem;
+				padding-top: 5px; 
                 font-family: $title-font;
-            }
+				
+			}
             &.daniel {
                 margin: 40px 0 0 100px;
                 width: 50%;
@@ -49,25 +50,6 @@ header.header-standard {
     }
 }
 
-.resume-button {
-    margin: 40px auto 0 auto;
-    max-width: 250px;
-    text-decoration: none;
-    color: #fff;
-    padding: 18px 80px;
-    display: block;
-    text-align: center;
-    font-weight: bold;
-    font-size: .8rem;
-    font-family: $raleway-font;
-    background: $hr-color;
-    box-shadow: $white-color 0px 0px 0px 1px, $white-color 0px 0px 0px 1px;
-    border-radius: 25px;
-    transition: all .3s ease;
-    &:hover {
-        color: rgba(255, 255, 255, .7);
-    }
-}
 
 .learn-more-box {
     width: 100%;

@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App;
 use App\Portfolio;
 use App\Statistics;
-use App;
 
 class HomeController extends Controller
 {
@@ -14,9 +14,8 @@ class HomeController extends Controller
         $statistics_data = Statistics::all();
 
         // fetch all portfolios and their images
-        //
 
-        return view('home/index', compact(['portfolio_data', 'statistics_data']));
+        return view('layout', compact(['portfolio_data', 'statistics_data']));
     }
 
 }

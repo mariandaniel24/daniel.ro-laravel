@@ -4,44 +4,53 @@ $(document).ready(function () {
 
 	// modals
 	$(".body-modal").iziModal({
-		// width: 860
-		// 	setGroup: 'portfolios',
-		// 	arrowKeys: true,
-		// 	navigateCaption: true,
-		// 	navigateArrows: true,
-		// 	transitionIn: 'comingIn',
-		// 	transitionOut: 'comingOut',
-		// 	setTitle: 'title0',
-		// 	setFullscreen: true,
-		// 	closeButton: true,
-		// 	onOpening: function (modal) {
-		// 		modal.startLoading();
-		// 		var modalId = modal.id.charAt(modal.id.length - 1);
-		// 		var modalContainer = $('#body-modal-' + modalId + ' .iziModal-content .container');
-		// 		var alreadyLoaded = modalContainer.children('h2').text() === ''  ? false : true;
+		width: 860,
+
+			padding: 30,
+			setGroup: 'portfolios',
+			arrowKeys: true,
+			navigateCaption: true,
+			navigateArrows: true,
+			transitionIn: 'comingIn',
+			transitionOut: 'comingOut',
+			setTitle: 'title0',
+			setFullscreen: true,
+			closeButton: true,
+			onOpening: function() {
+				$('body').addClass('disable-scroll');
+			},
+			onClosing: function() {
+				$('body').removeClass('disable-scroll');
+				
+			}
+			// onOpening: function (modal) {
+			// 	modal.startLoading();
+			// 	var modalId = modal.id.charAt(modal.id.length - 1);
+			// 	var modalContainer = $('#body-modal-' + modalId + ' .iziModal-content .container');
+			// 	var alreadyLoaded = modalContainer.children('h2').text() === ''  ? false : true;
 
 
-		// 		if(!alreadyLoaded) {
+			// 	if(!alreadyLoaded) {
 
-		// 			$.get('/rest-api/portfolio/' + modalId, function (data) {
-
-
-		// 				modalContainer.children('h2').text(data.project_name);
-
-		// 				for (i = 0; i < data.images.length; i++) {
-		// 					if (i > 0) {
-
-		// 						modalContainer.children('.row').children('.modal-images-box').children('.modal-secondary-image').append('<div class="col-md-3"><img class="img-responsive" src="' + data.images[i].image_url + '" /></div>');
-		// 					} else {
-		// 						modalContainer.children('.row').children('.modal-images-box').children('.modal-main-image').append('<div class="col-md-12"><img class="img-responsive" src="' + data.images[i].image_url + '" /></div>');
-		// 					}
-		// 				}
+			// 		$.get('/rest-api/portfolio/' + modalId, function (data) {
 
 
-		// 			});
-		// 		}
-		// 		modal.stopLoading();
-		// 	}
+			// 			modalContainer.children('h2').text(data.project_name);
+
+			// 			for (i = 0; i < data.images.length; i++) {
+			// 				if (i > 0) {
+
+			// 					modalContainer.children('.row').children('.modal-images-box').children('.modal-secondary-image').append('<div class="col-md-3"><img class="img-responsive" src="' + data.images[i].image_url + '" /></div>');
+			// 				} else {
+			// 					modalContainer.children('.row').children('.modal-images-box').children('.modal-main-image').append('<div class="col-md-12"><img class="img-responsive" src="' + data.images[i].image_url + '" /></div>');
+			// 				}
+			// 			}
+
+
+			// 		});
+			// 	}
+			// 	modal.stopLoading();
+			// }
 
 
 
@@ -138,8 +147,6 @@ $(document).ready(function () {
 
 	// language dropdown
 	// language dropdown
-	// language dropdown
-	// language dropdown
 
 
 	$('.language-box').click(function () {
@@ -148,6 +155,43 @@ $(document).ready(function () {
 
 
 
+	// image zoom
+	// image zoom
+	$('.zoom-link').fancybox({
+		buttons: [
+			'close'
+		],
+		loop: true,
+		lang: $('html')[0].lang,
+		i18n: {
+			'en': {
+				CLOSE: 'Close',
+				NEXT: 'Next',
+				PREV: 'Previous',
+				ERROR: 'The requested content cannot be loaded. <br/> Please try again later.',
+				ZOOM: 'Zoom'
+			},
+			'ro' : {
+				CLOSE: 'Inchide',
+				NEXT: 'Urmatorul',
+				PREV: 'Precedent',
+				ERROR: 'Imaginea nu s-a incarcat. <br/> Incearca mai tarziu.',
+				ZOOM: 'Mareste'
+			}	
+		},
+
+	});
+
+
+
+
+
+
+
+
+
+
+	// progress bar for carouesl
 	function startProgressBar() {
 		// apply keyframe animation
 		$(".tab-button-item a").css({
@@ -162,9 +206,6 @@ $(document).ready(function () {
 			transition: "width 0s"
 		});
 	}
-
-
-
 	// owl carousel
 	$('.owl-carousel').owlCarousel({
 		autoplay: true,
@@ -277,31 +318,11 @@ $(document).ready(function () {
 	};
 
 
-	// typing title
-	var app = document.getElementById('title-rotate');
-
-	var typewriter = new Typewriter(app, {
-		loop: true
-	});
-
-	typewriter.typeString('landing pages.')
-		.pauseFor(2000)
-		.deleteAll()
-		.typeString('websites.')
-		.pauseFor(2000)
-		.deleteChars(6)
-		.typeString(' applications.')
-		.pauseFor(2000)
-		.deleteAll()
-		.typeString('user interfaces.')
-		.pauseFor(2000)
-		.deleteAll()
-		.start();
 
 
 
 
-	// hover effect on portfolio
+	// hover effect on portfolio 
 	// hover effect on portfolio
 
 	$('.project-box').bind({
@@ -339,12 +360,14 @@ $(document).ready(function () {
 		e.preventDefault();
 		$(document).off("scroll");
 
-		$('a').each(function () {
+		$('a[data-nav="true"]').each(function () {
 			$(this).removeClass('active');
-		})
+		});
+		
 		$(this).addClass('active');
+		isNavbarLink = $(this).hasClass('not-navbar') ? false : true;
 
-		if (!mobile) {
+		if (!mobile && isNavbarLink) {
 			$('.hamburger').toggleClass('is-active');
 			$('nav.nav-box').toggleClass('desktop');
 			$('body').toggleClass('no-scroll');

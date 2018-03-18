@@ -1,6 +1,4 @@
-
-
-<div  class="container standard">
+<div class="container standard">
 
 
 
@@ -8,16 +6,16 @@
 
 		<h1 class="page-title text-center">@lang('about.about_title')</h1>
 
-	</div><!-- /.section-heading -->
+	</div>
 
 	<div class="row justify-content-center">
 
 
 		<div class="col-md-4">
 			<div class="section-about-image">
-				<img src="http://mixtheme.com/mixtheme/pikxal/images/about-me.png" class="img-responsive shadow-1" alt="">	
-			</div><!-- /.section-about -->
-		</div><!-- /.row -->
+				<img src="http://mixtheme.com/mixtheme/pikxal/images/about-me.png" class="img-responsive shadow-1" alt="">
+			</div>
+		</div>
 
 		<div class="col-md-6">
 
@@ -25,20 +23,19 @@
 
 				<p class="about-hi">
 					@lang('about.hi')
-				</p><!-- /.title -->
-				<br><br><br>
-					<p class="about-info">@lang('about.first_paragraph')</p>
-					<br>
-					<p class="about-info">@lang('about.second_paragraph')</p>
-				<br><br>
-			</div><!-- /.section-about -->
-		</div><!-- /.col-md-6 -->
+				</p>
+				<br>
+				<br>
+				<br>
+				<p class="about-info">@lang('about.first_paragraph')</p>
+				<br>
+				<p class="about-info">@lang('about.second_paragraph')</p>
+				<br>
+				<br>
+			</div>
+		</div>
 
-	</div><!-- /.row justify-content-center -->
+	</div>
 
 
-
-
-
-
-</div><!-- /.container  -->
+</div>

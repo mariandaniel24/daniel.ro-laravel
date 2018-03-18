@@ -40,8 +40,14 @@
     }
 }
 
-.project-content {
+.modal-title {
+   padding: 20px 0;
+   font-family: $title-font;
 }
+
+ .modal-info-box {
+     position: relative;
+ }
 
 .fog {
     background: $color4;
@@ -49,11 +55,8 @@
 
 .modal-secondary-image {
     max-height: 300px;
-    height: 100px;
 }
 
-.modal-main-image {
-}
 
 .portfolio-row {
     &>:nth-child(odd) {
