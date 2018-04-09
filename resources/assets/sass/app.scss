@@ -43,6 +43,7 @@
             font-size: 2rem;
         }
     }
+
     p {
         color: #666;
     }
@@ -102,85 +103,61 @@
     }
 
     .language-box {
-
-        &#lang-nav {
-            @media (min-width: 768px) {
+        &#lang-navbar {
+            @media (min-width: 870px) {
                 display: block!important;
             }
         }
-
         &#lang-header {
-            @media (max-width: 768px) {
+            @media (max-width: 870px) {
                 display: block!important;
             }
         }
         display: none;
         position: absolute;
         left: 100px;
-        top: 0;
-        .language-list {
-            position: absolute;
-            // top: 70px;
-            left: 0;
-            width: 55px;
-            background: rgba(255, 255, 255, 0.1);
-            height: 55px;
-            transition: all .5s;
-            &:hover {
-                background: rgba(255, 255, 255, .3);
-                >a,
-                i {
-                    color: $color3;
-                }
+        top: 26px;
+        .language-button,
+        .language-button:focus,
+        .language-button:active {
+            font-family: $raleway-font;
+            background: none;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            padding: 0;
+            color: $social-color;
+
+            .fa {
+                color: $social-color;
+                display: inline;
             }
-            a {
-                cursor: pointer;
-                line-height: 10px;
-                font-weight: 500;
-                font-size: .6rem;
-                text-align: center;
-                display: block;
-                color: #f7f7f7;
-                transition: all .5s;
-                i {
-                    line-height: 36px;
-                    display: block;
-                    color: #f7f7f7;
-                    text-align: center;
-                    font-size: 1.45rem;
-                    transition: all .5s;
-                }
-                img {
-                    height: 30px;
-                    width: 40px;
-                }
+            &.lang-active {
+                color: #000;
+
             }
         }
         .language-dropdown-list {
-            position: absolute;
-            width: 55px;
-            background: rgba(255, 255, 255, 0.1);
-            left: 0px;
-            top: 125px;
-            overflow: hidden;
-            height: 0px;
-            -webkit-transition: all .3s ease;
-            transition: all .3s ease;
             &.active {
-                height: 55px !important;
+                display: block!important;
             }
-            .language-item-container a {
-                color: #f7f7f7;
-                font-size: .6rem;
-                text-align: center;
-                display: block;
+            display: none;
+            max-width: 150px;
+            background: $white-color;
+            padding: 8px;
+            border-radius: 4px;
+            // border: 1px solid rgb(33, 37, 41);
+            margin-left: -6px;
+            a {
+                font-size: .7rem;
                 text-decoration: none;
-                line-height: 15px;
+                color: rgb(33, 37, 41);
+                display: block;
+                padding: 5px 0;
                 img {
-                    width: 30px;
-                    height: 25px;
-                    margin: 2px auto 0 auto;
-                    display: block;
+                    display: inline-block;
+                    width: 15px;
+                    height: auto;
                 }
             }
         }
@@ -198,7 +175,7 @@
             border: 2px solid $social-color;
         }
         &#logo-navbar {
-            @media (min-width: 768px) {
+            @media (min-width: 870px) {
                 display: block!important;
             }
             p {
@@ -210,7 +187,7 @@
             }
         }
         &#logo-header {
-            @media (max-width: 768px) {
+            @media (max-width: 870px) {
                 display: block!important;
             }
             p {
@@ -237,7 +214,7 @@
         }
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 870px) {
         nav.nav-box {
             position: fixed;
             top: 0;
@@ -302,7 +279,7 @@
     }
 
     nav.nav-box {
-        @media (max-width: 768px) {
+        @media (max-width: 870px) {
             width: 100%;
             height: 100vh;
             position: fixed;
@@ -687,7 +664,7 @@
         border: 0;
         margin: 0;
         overflow: visible;
-        @media (min-width: 768px) {
+        @media (min-width: 870px) {
             display: none;
         }
     }

@@ -10,11 +10,22 @@ return [
         'contact' => 'Contact',
     ],
     
+
     'language_title' => 'Language',
-    'other_language' => 'Romanian',
-    'other_language_link' => 'lang/ro',
-    'other_language_icon' => 'https://lipis.github.io/flag-icon-css/flags/4x3/ro.svg',
-    
+    // languages
+    'other' => [
+        'language' => 'Romanian',
+        'language_link' => 'lang/ro',
+        'language_icon' => 'https://lipis.github.io/flag-icon-css/flags/4x3/ro.svg',
+    ],
+    'current' => [
+        
+        'language' => 'English',
+        'language_link' => 'lang/en',
+        'language_icon' => 'https://lipis.github.io/flag-icon-css/flags/4x3/um.svg',
+        
+    ],
+ 
  
 
     'scroll_down' => 'Click to discover more.',

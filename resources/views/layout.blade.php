@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="{{ app()->getlocale() }}">
 <head>
-  <title>Master title</title>
+  <title>{{ env('APP_NAME') }} - Web design | UX & UI | Designer | SEO Services</title>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="description" content="">
@@ -27,24 +27,22 @@
         <div id="logo-navbar" class="logo">
           <p>Daniel.</p>
         </div>
+        <div id="lang-navbar" class="language-box shadow-6">
+          <button type="button" class="language-button">@lang('navbar.language_title') 
+			<i class="fa fa-chevron-down" aria-hidden="true"></i>
+		</button>
+          <div class="language-dropdown-list shadow-2">
+            {{--  <a href="@lang('navbar.current.language_link')">
+              <img class="img-responsive" src="@lang('navbar.current.language_icon')" alt="">
+              @lang('navbar.current.language')	
+             </a>  --}}
 
-        <div id="lang-nav" class="language-box shadow-6">
-          <div class="language-list">
-            <a>
-					  <i class="fa fa-flag" aria-hidden="true"></i>
-					@lang('navbar.language_title')
-				  </a>
-          </div>
-          <div class="language-dropdown-list">
-            <div class="language-item-container">
-              <a href="@lang('navbar.other_language_link')">
-						<img class="img-responsive" src="@lang('navbar.other_language_icon')" alt="">
-						@lang('navbar.other_language')
-					  </a>
-            </div>
+            <a href="@lang('navbar.other.language_link')">
+				      <img class="img-responsive" src="@lang('navbar.other.language_icon')" alt="">
+					  	@lang('navbar.other.language')	
+            </a>
           </div>
         </div>
-
         <div class="hamburger hamburger--elastic js-hamburger">
           <div class="hamburger-box">
             <div class="hamburger-inner"></div>
@@ -74,46 +72,39 @@
       <section id="home" class="section ">
   @include ('layouts.home')
       </section>
-
       <!-- Services section -->
       <section id="services" class="section white-bg">
   @include ('layouts.services')
       </section>
-
       <!-- Portfolio section -->
       <section id="portfolio" class="section">
   @include ('layouts.portfolio')
       </section>
-
       <!-- Statistics section -->
       <section id="statistics" class="section">
   @include ('layouts.statistics')
       </section>
-
       <!-- About section -->
       <section id="about" class="section ">
   @include ('layouts.about')
       </section>
-
       <!-- Contact section -->
       <section id="contact" class="section ">
   @include ('layouts.contact')
       </section>
-
       <!-- Footer section -->
       <section id="footer" class="section footer-bg">
   @include ('layouts.footer')
       </section>
-
     </div>
   </div>
-
   <!-- Loading section -->
   <div id="loading-box">
     <div class="loader">
       <svg class="loading" width="96px" height="96px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
   			<circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
-  		</svg></div>
+      </svg>
+    </div>
   </div>
   @yield('main')
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

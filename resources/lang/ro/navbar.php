@@ -10,12 +10,21 @@ return [
         'contact' => 'Contact',
 
     ],
-    
-    'language_title' => 'Limba',
-    'other_language' => 'Engleză',
-    'other_language_link' => 'lang/en',
-    'other_language_icon' => 'https://lipis.github.io/flag-icon-css/flags/4x3/um.svg',
 
+    'language_title' => 'Limba',
+    'other' => [
+        'language' => 'Engleză',
+        'language_link' => 'lang/en',
+        'language_icon' => 'https://lipis.github.io/flag-icon-css/flags/4x3/um.svg',
+    ],
+
+    'current' => [
+        
+        'language' => 'Română',
+        'language_link' => 'lang/ro',
+        'language_icon' => 'https://lipis.github.io/flag-icon-css/flags/4x3/roa.svg',
+        
+    ],
 
     'scroll_down' => 'Click pentru a afla mai multe.',
     'cv' => 'C.V',
@@ -23,3 +32,4 @@ return [
     'design_title' => 'construiesc si dezvolt',
 
 ];
+

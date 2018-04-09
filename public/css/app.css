@@ -4898,97 +4898,71 @@ body.disable-scroll {
   display: none;
   position: absolute;
   left: 100px;
-  top: 0;
+  top: 26px;
 }
 
-@media (min-width: 768px) {
-  .language-box#lang-nav {
+@media (min-width: 870px) {
+  .language-box#lang-navbar {
     display: block !important;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 870px) {
   .language-box#lang-header {
     display: block !important;
   }
 }
 
-.language-box .language-list {
-  position: absolute;
-  left: 0;
-  width: 55px;
-  background: rgba(255, 255, 255, 0.1);
-  height: 55px;
-  -webkit-transition: all .5s;
-  transition: all .5s;
-}
-
-.language-box .language-list:hover {
-  background: rgba(255, 255, 255, 0.3);
-}
-
-.language-box .language-list:hover > a,
-.language-box .language-list:hover i {
-  color: #36f1cd;
-}
-
-.language-box .language-list a {
+.language-box .language-button,
+.language-box .language-button:focus,
+.language-box .language-button:active {
+  font-family: "Raleway";
+  background: none;
+  border: none;
   cursor: pointer;
-  line-height: 10px;
-  font-weight: 500;
-  font-size: .6rem;
-  text-align: center;
-  display: block;
-  color: #f7f7f7;
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  outline: none;
+  padding: 0;
+  color: #BDBDBD;
 }
 
-.language-box .language-list a i {
-  line-height: 36px;
-  display: block;
-  color: #f7f7f7;
-  text-align: center;
-  font-size: 1.45rem;
-  -webkit-transition: all .5s;
-  transition: all .5s;
+.language-box .language-button .fa,
+.language-box .language-button:focus .fa,
+.language-box .language-button:active .fa {
+  color: #BDBDBD;
+  display: inline;
 }
 
-.language-box .language-list a img {
-  height: 30px;
-  width: 40px;
+.language-box .language-button.lang-active,
+.language-box .language-button:focus.lang-active,
+.language-box .language-button:active.lang-active {
+  color: #000;
 }
 
 .language-box .language-dropdown-list {
-  position: absolute;
-  width: 55px;
-  background: rgba(255, 255, 255, 0.1);
-  left: 0px;
-  top: 125px;
-  overflow: hidden;
-  height: 0px;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+  display: none;
+  max-width: 150px;
+  background: #fff;
+  padding: 8px;
+  border-radius: 4px;
+  margin-left: -6px;
 }
 
 .language-box .language-dropdown-list.active {
-  height: 55px !important;
+  display: block !important;
 }
 
-.language-box .language-dropdown-list .language-item-container a {
-  color: #f7f7f7;
-  font-size: .6rem;
-  text-align: center;
-  display: block;
+.language-box .language-dropdown-list a {
+  font-size: .7rem;
   text-decoration: none;
-  line-height: 15px;
+  color: #212529;
+  display: block;
+  padding: 5px 0;
 }
 
-.language-box .language-dropdown-list .language-item-container a img {
-  width: 30px;
-  height: 25px;
-  margin: 2px auto 0 auto;
-  display: block;
+.language-box .language-dropdown-list a img {
+  display: inline-block;
+  width: 15px;
+  height: auto;
 }
 
 .logo {
@@ -5004,7 +4978,7 @@ body.disable-scroll {
   border: 2px solid #BDBDBD;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 870px) {
   .logo#logo-navbar {
     display: block !important;
   }
@@ -5019,7 +4993,7 @@ body.disable-scroll {
   color: #000;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 870px) {
   .logo#logo-header {
     display: block !important;
   }
@@ -5048,7 +5022,7 @@ nav.nav-box ul li a {
   transition: color 0.3s linear;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 870px) {
   nav.nav-box {
     position: fixed;
     top: 0;
@@ -5120,7 +5094,7 @@ nav.nav-box ul li a {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 870px) {
   nav.nav-box {
     width: 100%;
     height: 100vh;
@@ -5560,7 +5534,7 @@ hr {
   overflow: visible;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 870px) {
   .hamburger {
     display: none;
   }

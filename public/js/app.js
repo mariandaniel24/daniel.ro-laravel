@@ -206,8 +206,15 @@ $(document).ready(function () {
 	// language dropdown
 
 
-	$('.language-box').click(function () {
-		$(this).children('.language-dropdown-list').toggleClass('active');
+	$('.language-button').click(function (e) {
+		$(this).siblings('.language-dropdown-list').toggleClass('active');
+	});
+
+	// hide dropdown if user clicked anywhere but the language list
+	$('html').click(function (e) {
+		if (!$(e.target).hasClass('language-button')) {
+			$(".language-dropdown-list").removeClass('active');
+		}
 	});
 
 	// image zoom
@@ -319,11 +326,13 @@ $(document).ready(function () {
 			$('nav.nav-box').addClass('active').addClass('shadow-6');
 			navLinkColor.removeClass('white');
 			$('.logo#logo-navbar p').addClass('logo-active');
+			$('.language-button').addClass('lang-active');
 		} else {
 
 			$('nav.nav-box').removeClass('active').removeClass('shadow-6');
 			navLinkColor.addClass('white');
 			$('.logo#logo-navbar p').removeClass('logo-active');
+			$('.language-button').removeClass('lang-active');
 		}
 
 		$('#menu li a').each(function () {
