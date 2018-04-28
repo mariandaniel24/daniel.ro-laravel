@@ -3,22 +3,22 @@
 		<p>Daniel.</p>
 	</div>
 
-	<div id="lang-header" class="language-box shadow-6">
-			<button type="button" class="language-button">@lang('navbar.language_title')
+	<div id="lang-header" class="language-box">
+		<button type="button" class="language-button">@lang('navbar.language_title')
 			  <i class="fa fa-chevron-down" aria-hidden="true"></i>
 		  </button>
-			<div class="language-dropdown-list shadow-2">
-			  {{--  <a href="@lang('navbar.current.language_link')">
+		<div class="language-dropdown-list">
+			{{-- <a href="@lang('navbar.current.language_link')">
 				<img class="img-responsive" src="@lang('navbar.current.language_icon')" alt="">
 				@lang('navbar.current.language')	
-			   </a>  --}}
-  
-			  <a href="@lang('navbar.other.language_link')">
+			   </a> --}}
+
+			<a href="@lang('navbar.other.language_link')">
 						<img class="img-responsive" src="@lang('navbar.other.language_icon')" alt="">
 							@lang('navbar.other.language')	
 			  </a>
-			</div>
-		  </div>
+		</div>
+	</div>
 
 	<div class="hamburger hamburger--elastic js-hamburger">
 		<div class="hamburger-box">

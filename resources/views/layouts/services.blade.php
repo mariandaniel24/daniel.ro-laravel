@@ -1,6 +1,6 @@
 <div class="container standard">
 	<div class="section-heading">
-		<h1 class="page-title text-center">@lang('services.services_title')</h1>
+		<h2 class="page-title text-center">@lang('services.services_title')</h2>
 	</div>
 	{{--
 	<div class="services-container-all shadow-6"> --}}

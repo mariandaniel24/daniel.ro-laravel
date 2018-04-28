@@ -1,14 +1,15 @@
 <!doctype html>
 <html lang="{{ app()->getlocale() }}">
+
 <head>
-  <title>{{ env('APP_NAME') }} - Web design | UX & UI | Designer | SEO Services</title>
+  <title>@lang('meta.title')</title>
   <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="@lang('meta.description')">
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <link rel="apple-touch-icon" href="icon.png" /> {{--
   <link rel="stylesheet" href="/css/themify-icons.css"> --}}
+  <meta name="robots" content="index,follow">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/css/iziModal.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
@@ -19,6 +20,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.2.0/css/iziToast.min.css" />
   <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
+
 <body>
   <div id="wrapper">
     <!-- Navbar -->
@@ -27,15 +29,15 @@
         <div id="logo-navbar" class="logo">
           <p>Daniel.</p>
         </div>
-        <div id="lang-navbar" class="language-box shadow-6">
+        <div id="lang-navbar" class="language-box">
           <button type="button" class="language-button">@lang('navbar.language_title') 
 			<i class="fa fa-chevron-down" aria-hidden="true"></i>
 		</button>
-          <div class="language-dropdown-list shadow-2">
-            {{--  <a href="@lang('navbar.current.language_link')">
+          <div class="language-dropdown-list">
+            {{-- <a href="@lang('navbar.current.language_link')">
               <img class="img-responsive" src="@lang('navbar.current.language_icon')" alt="">
               @lang('navbar.current.language')	
-             </a>  --}}
+             </a> --}}
 
             <a href="@lang('navbar.other.language_link')">
 				      <img class="img-responsive" src="@lang('navbar.other.language_icon')" alt="">
@@ -81,9 +83,9 @@
   @include ('layouts.portfolio')
       </section>
       <!-- Statistics section -->
-      <section id="statistics" class="section">
+      
   @include ('layouts.statistics')
-      </section>
+
       <!-- About section -->
       <section id="about" class="section ">
   @include ('layouts.about')
@@ -93,9 +95,8 @@
   @include ('layouts.contact')
       </section>
       <!-- Footer section -->
-      <section id="footer" class="section footer-bg">
   @include ('layouts.footer')
-      </section>
+
     </div>
   </div>
   <!-- Loading section -->
@@ -107,14 +108,17 @@
     </div>
   </div>
   @yield('main')
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/TypewriterJS/1.0.0/typewriter.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animateCSS/1.2.2/jquery.animatecss.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/3.3.6/scrollreveal.js" integrity="sha256-wpD5v2/x4TsvsX8iWHHJePQJ+j7yEOJgt2cVTGc27u0="
-    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/3.3.6/scrollreveal.min.js"></script>
+
+  @if($portfolio_data)
   <script src="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/js/iziModal.min.js"></script>
+  @endif
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.2.0/js/iziToast.min.js"></script>
   <script src="{{asset('js/app.js')}}"></script>
   <script>
@@ -142,4 +146,5 @@
   </script>
   @endif
 </body>
+
 </html>

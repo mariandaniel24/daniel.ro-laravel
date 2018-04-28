@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use \App\Statistics;
 
 class StatisticsTableSeeder extends Seeder
 {
@@ -11,11 +12,11 @@ class StatisticsTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('statistics')->insert([
-            'coffees' => rand(),
-            'hours' => rand(),
-            'clients' => rand(),
 
+       Statistics::insert([
+            'coffees' => rand(55, 183),
+            'hours' => rand(121, 281),
+            'clients' => rand(3, 15)
         ]);
     }
 }

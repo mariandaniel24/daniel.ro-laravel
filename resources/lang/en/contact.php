@@ -6,7 +6,7 @@ return [
     'name' => 'Name:',
     'email' => 'Email:',
     'message' => 'Message:',
-    'contact_title' => 'Contact me',
+    'contact_title' => 'Get in touch',
     'send_message' => 'Send message',
 
     'message_sent' => 'Message sent successfully ! <br> I will get in touch with you soon !',

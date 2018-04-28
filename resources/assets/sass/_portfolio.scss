@@ -41,13 +41,13 @@
 }
 
 .modal-title {
-   padding: 20px 0;
-   font-family: $title-font;
+    padding: 20px 0;
+    font-family: $title-font;
 }
 
- .modal-info-box {
-     position: relative;
- }
+.modal-info-box {
+    position: relative;
+}
 
 .fog {
     background: $color4;
@@ -57,12 +57,25 @@
     max-height: 300px;
 }
 
-
 .portfolio-row {
     &>:nth-child(odd) {
         background: $color2;
     }
     &>:nth-child(even) {
         background: $color5;
+    }
+}
+
+.iziModal-header-buttons {
+    position: relative !important;
+}
+
+.iziModal-button {
+    background-color: black !important;
+    position: absolute;
+    top: 0px;
+    right: -20px;
+    @media screen and (max-width: 768px) {
+        right: -35px;
     }
 }

@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer class="footer footer-bg">
     <div class="footer-box">
         <div class="container">
             <div class="row justify-content-center">

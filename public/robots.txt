@@ -1,2 +1,7 @@
 User-agent: *
-Disallow:
+Disallow: 
+Disallow: /lang
+Disallow: /mail
+Disallow: /portfolio
+Disallow: /rest-api
+Sitemap: http://5ffeff1b.ngrok.io/sitemap.xml

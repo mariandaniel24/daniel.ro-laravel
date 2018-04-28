@@ -4,7 +4,7 @@
 
 	<div class="section-heading">
 
-		<h1 class="page-title text-center">@lang('about.about_title')</h1>
+		<h2 class="page-title text-center">@lang('about.about_title')</h2>
 
 	</div>
 
@@ -20,15 +20,14 @@
 		<div class="col-md-6">
 
 			<div class="section-about">
-
+				
 				<p class="about-hi">
 					@lang('about.hi')
 				</p>
 				<br>
 				<br>
 				<br>
-				<p class="about-info">@lang('about.first_paragraph')</p>
-				<br>
+				<p class="about-hi">@lang('about.first_paragraph')</p>
 				<p class="about-info">@lang('about.second_paragraph')</p>
 				<br>
 				<br>
