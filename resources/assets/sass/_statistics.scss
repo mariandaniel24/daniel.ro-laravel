@@ -2,6 +2,7 @@
     min-height: 220px;
     width: 100%;
     background: $color9;
+    // background-image: url('/img/stats-bg.jpg');
     >.container {
         margin: 0 auto;
         // @media (min-width: 576px) {
@@ -19,7 +20,7 @@
         p,
         span {
             font-family: $lato-font;
-        }
+    }
         p {
             padding: 10px;
             font-size: .6rem;

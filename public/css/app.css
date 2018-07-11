@@ -4972,8 +4972,8 @@ body.disable-scroll {
 .language-box .language-dropdown-list {
   visibility: hidden;
   opacity: 0;
-  -webkit-transition: visibility 0s, opacity 0.5s linear;
-  transition: visibility 0s, opacity 0.5s linear;
+  -webkit-transition: visibility 0s, opacity 0.5s linear;
+  transition: visibility 0s, opacity 0.5s linear;
   max-width: 150px;
   background: #fff;
   padding: 8px;

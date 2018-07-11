@@ -1,9 +1,9 @@
     // Fonts
-    @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,600|Poiret+One|Open+Sans|Lato|Asap|Play|Montserrat');
+    @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,600|Poiret+One|Open+Sans|Lato|Asap|Play|Montserrat'); // Extras
     @import "extras/variables";
-    @import "extras/mixins"; // Extras
+    @import "extras/mixins";
     @import "extras/reset";
-    @import "extras/grid";
+    @import "extras/grid"; // @import "extras/libraries";
     @import "color-schemes/scheme1"; // @import "hamburgers/hamburgers";
     // IMPORT TABS SECTIONS 
     @import "header";
@@ -107,12 +107,12 @@
     .language-box {
         &#lang-navbar {
             @media (min-width: 870px) {
-                display: block!important;
+                display: block !important;
             }
         }
         &#lang-header {
             @media (max-width: 870px) {
-                display: block!important;
+                display: block !important;
             }
         }
         display: none;
@@ -129,14 +129,12 @@
             outline: none;
             padding: 0;
             color: $social-color;
-
             .fa {
                 color: $social-color;
                 display: inline;
             }
             &.lang-active {
                 color: #000;
-
             }
         }
         .language-dropdown-list {
@@ -148,12 +146,12 @@
             }
             visibility: hidden;
             opacity: 0;
-            transition: visibility 0s, opacity 0.5s linear;
+            transition: visibility 0s,
+            opacity 0.5s linear;
             max-width: 150px;
             background: $white-color;
             padding: 8px;
-            border-radius: 4px;
-            // border: 1px solid rgb(33, 37, 41);
+            border-radius: 4px; // border: 1px solid rgb(33, 37, 41);
             margin-left: -6px;
             a {
                 font-size: .7rem;
@@ -183,7 +181,7 @@
         }
         &#logo-navbar {
             @media (min-width: 870px) {
-                display: block!important;
+                display: block !important;
             }
             p {
                 font-size: 1rem;
@@ -195,7 +193,7 @@
         }
         &#logo-header {
             @media (max-width: 870px) {
-                display: block!important;
+                display: block !important;
             }
             p {
                 color: #fff;
@@ -245,7 +243,7 @@
                 right: 20px;
             }
             ul {
-                position: absolute!important;
+                position: absolute !important;
                 top: 5px;
                 right: 20px;
                 max-width: 80%; // margin-top: 5px;

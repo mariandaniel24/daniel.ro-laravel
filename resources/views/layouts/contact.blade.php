@@ -2,6 +2,7 @@
 	<div class="section-heading">
 		<h2 class="page-title contact-title text-center">@lang('contact.contact_title')</h2>
 	</div>
+	<p></p>
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-md-6 col-lg-6 col-xl-4">

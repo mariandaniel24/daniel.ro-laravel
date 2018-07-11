@@ -10,6 +10,8 @@
   <link rel="apple-touch-icon" href="icon.png" /> {{--
   <link rel="stylesheet" href="/css/themify-icons.css"> --}}
   <meta name="robots" content="index,follow">
+
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/css/iziModal.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.min.css">
