@@ -7,7 +7,7 @@
                         <i class="fa fa-clock-o" aria-hidden="true"></i>
                     </div>
                     <div class="stats-info">
-                        <p><span>{{$statistics_data[0]->hours}}</span> @lang('statistics.hours')</p>
+                        <p><span>500</span> @lang('statistics.hours')</p>
                     </div>
                 </div>
             </div>
@@ -17,7 +17,7 @@
                         <i class="fa fa-coffee" aria-hidden="true"></i>
                     </div>
                     <div class="stats-info">
-                        <p><span>{{$statistics_data[0]->coffees}}</span> @lang('statistics.coffees')</p>
+                        <p><span>100</span> @lang('statistics.coffees')</p>
                     </div>
                 </div>
             </div>
@@ -27,7 +27,7 @@
                         <i class="fa fa-users" aria-hidden="true"></i>
                     </div>
                     <div class="stats-info">
-                        <p><span>{{$statistics_data[0]->clients}}</span> @lang('statistics.clients')</p>
+                        <p><span>20</span> @lang('statistics.clients')</p>
                     </div>
                 </div>
             </div>

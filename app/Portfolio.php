@@ -13,6 +13,7 @@ class Portfolio extends Model
 	protected $hidden = ['created_at', 'updated_at'];
 
 	public function images() {
+		// return [];
 		return $this->hasMany(PortfolioImages::class);  // App\PortfolioImages
 	}
 

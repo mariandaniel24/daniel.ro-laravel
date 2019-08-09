@@ -10,7 +10,7 @@ class PortfolioController extends Controller
 
     public function index()
     {
-        // return Portfolio::with('images')->get();
+        return Portfolio::with('images')->get();
         return [];
 
     }
@@ -18,9 +18,9 @@ class PortfolioController extends Controller
 // get data from portfolio model - id
     public function show($id)
     {
-        // return Portfolio::find($id)->images;
-        // $data = Portfolio::find($id);
-        // $data->images; 
+        return Portfolio::find($id)->images;
+        $data = Portfolio::find($id);
+        $data->images; 
         $data = [];
          return $data;
     }

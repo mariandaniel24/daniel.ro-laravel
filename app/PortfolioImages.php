@@ -9,6 +9,7 @@ class PortfolioImages extends Model
     protected $visible = ['image_url'];
     
     public function portfolio() {
+        // return [];
         return $this->belongsTo(Portfolio::class);
     }
 
