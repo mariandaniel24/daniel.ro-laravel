@@ -81,56 +81,56 @@ $(document).ready(function () {
 
 	$(this).scrollTop(0);
 	// modals
-	$(".body-modal").iziModal({
-		width: 860,
+	// $(".body-modal").iziModal({
+	// 	width: 860,
 
-		padding: 30,
-		setGroup: 'portfolios',
-		arrowKeys: true,
-		navigateCaption: true,
-		navigateArrows: true,
-		transitionIn: 'comingIn',
-		transitionOut: 'comingOut',
-		setTitle: 'title0',
-		setFullscreen: true,
-		closeButton: true,
-		onOpening: function onOpening() {
-			$('body').addClass('disable-scroll');
-		},
-		onClosing: function onClosing() {
-			$('body').removeClass('disable-scroll');
-		}
-		// onOpening: function (modal) {
-		// 	modal.startLoading();
-		// 	var modalId = modal.id.charAt(modal.id.length - 1);
-		// 	var modalContainer = $('#body-modal-' + modalId + ' .iziModal-content .container');
-		// 	var alreadyLoaded = modalContainer.children('h2').text() === ''  ? false : true;
-
-
-		// 	if(!alreadyLoaded) {
-
-		// 		$.get('/rest-api/portfolio/' + modalId, function (data) {
+	// 	padding: 30,
+	// 	setGroup: 'portfolios',
+	// 	arrowKeys: true,
+	// 	navigateCaption: true,
+	// 	navigateArrows: true,
+	// 	transitionIn: 'comingIn',
+	// 	transitionOut: 'comingOut',
+	// 	setTitle: 'title0',
+	// 	setFullscreen: true,
+	// 	closeButton: true,
+	// 	onOpening: function onOpening() {
+	// 		$('body').addClass('disable-scroll');
+	// 	},
+	// 	onClosing: function onClosing() {
+	// 		$('body').removeClass('disable-scroll');
+	// 	}
+	// 	// onOpening: function (modal) {
+	// 	// 	modal.startLoading();
+	// 	// 	var modalId = modal.id.charAt(modal.id.length - 1);
+	// 	// 	var modalContainer = $('#body-modal-' + modalId + ' .iziModal-content .container');
+	// 	// 	var alreadyLoaded = modalContainer.children('h2').text() === ''  ? false : true;
 
 
-		// 			modalContainer.children('h2').text(data.project_name);
+	// 	// 	if(!alreadyLoaded) {
 
-		// 			for (i = 0; i < data.images.length; i++) {
-		// 				if (i > 0) {
-
-		// 					modalContainer.children('.row').children('.modal-images-box').children('.modal-secondary-image').append('<div class="col-md-3"><img class="img-responsive" src="' + data.images[i].image_url + '" /></div>');
-		// 				} else {
-		// 					modalContainer.children('.row').children('.modal-images-box').children('.modal-main-image').append('<div class="col-md-12"><img class="img-responsive" src="' + data.images[i].image_url + '" /></div>');
-		// 				}
-		// 			}
+	// 	// 		$.get('/rest-api/portfolio/' + modalId, function (data) {
 
 
-		// 		});
-		// 	}
-		// 	modal.stopLoading();
-		// }
+	// 	// 			modalContainer.children('h2').text(data.project_name);
+
+	// 	// 			for (i = 0; i < data.images.length; i++) {
+	// 	// 				if (i > 0) {
+
+	// 	// 					modalContainer.children('.row').children('.modal-images-box').children('.modal-secondary-image').append('<div class="col-md-3"><img class="img-responsive" src="' + data.images[i].image_url + '" /></div>');
+	// 	// 				} else {
+	// 	// 					modalContainer.children('.row').children('.modal-images-box').children('.modal-main-image').append('<div class="col-md-12"><img class="img-responsive" src="' + data.images[i].image_url + '" /></div>');
+	// 	// 				}
+	// 	// 			}
 
 
-	});
+	// 	// 		});
+	// 	// 	}
+	// 	// 	modal.stopLoading();
+	// 	// }
+
+
+	// });
 
 	// contact page
 	// contact page
