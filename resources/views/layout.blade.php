@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.2.0/css/iziToast.min.css" />
-  <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+  <link rel="stylesheet" href="/css/app.css">
 </head>
 
 <body>
@@ -122,7 +122,7 @@
   @endif
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.2.0/js/iziToast.min.js"></script>
-  <script src="{{asset('js/app.js')}}"></script>
+  <script src="/js/app.js"></script>
   <script>
     var app = document.getElementById('title-rotate');
     var typewriter = new Typewriter(app, { loop: true });
